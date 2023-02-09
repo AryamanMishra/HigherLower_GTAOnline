@@ -155,8 +155,40 @@ html {
 	
 }
 
+.alert-none {
+	color: white;
+	text-align: center;
+	padding: 0.38em 0.7em;
+	width: 2em;
+	height: 2em;
+	font-size: 2.4em;
+	border-radius: 50%;
+	background-color: rgb(11, 0, 31);
+}
 
 
+.alert-success {
+	background-color: green;
+	color:white;
+	text-align: center;
+	padding: 0.5em 0.3em;
+	width: 2em;
+	height: 2em;
+	font-size: 2.4em;
+	border-radius: 50%;
+}
+
+
+.alert-failure {
+	background-color: red;
+	color:white;
+	text-align: center;
+	padding: 0.5em 0.3em;
+	width: 2em;
+	height: 2em;
+	font-size: 2.4em;
+	border-radius: 50%;
+}
 
 
 
@@ -184,12 +216,14 @@ html {
 	
 }
 
+
 .second-image img {
 	border-radius: 5px;
 	width: 300px;
 	height: 160px;
 	margin-bottom: 2em;
 }
+
 
 .second-image:hover {
 	border: 2px solid white;
