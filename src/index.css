@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,3 +16,71 @@ body {
 	background-size: cover
 }
 
+.home-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2em;
+	gap: 6em;
+}
+
+.home-page h1 {
+	letter-spacing: 1.5px;
+	font-size: 2.5em;
+	color: rgb(134, 244, 115);
+	text-transform: capitalize;
+}
+
+.home-page button {
+	border-radius: 30px;
+	cursor: pointer;
+	width: 200px;
+	background-color: black;
+	color: rgb(255, 255, 255);
+	font-size: 1.8em;
+	padding: 0.5em 0.75em;
+}
+
+.game-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 25em;
+	gap: 10em;
+	margin: auto;
+}
+
+
+.game-page img {
+	width: 15em;
+	height: 15em;
+	object-fit: contain
+}
+
+.first-image {
+	border: 2px solid white;
+}
+
+.first-image h3 {
+	text-align: center;
+	color: white;
+}
+.first-image p {
+	text-align: center;
+	color: white;
+}
+
+.second-image {
+	border: 2px solid white;
+}
+
+
+.second-image h3 {
+	text-align: center;
+	color: white;
+}
+.second-image p {
+	text-align: center;
+	color: white;
+}

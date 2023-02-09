@@ -439,4 +439,4 @@ for (let i=0;i<weapons_data.length;i++) {
 }
 
 
-export default weapons_data
+export {weapons_data}
