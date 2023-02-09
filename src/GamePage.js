@@ -13,18 +13,27 @@ const GamePage = ()=> {
 	},[])
 
 	return (
-		<div className='game-page'>
-			<div className='first-image'>
-				<img src={image1.img} alt="" />
-				<h3>{image1.name}</h3>
-				<p>{image1.cost}</p>
+		<>
+			<div className='game-title'>
+					<h2>which one is costlier??</h2>
 			</div>
-			<div className='second-image'>
-				<img src={image2.img} alt="" />
-				<h3>{image2.name}</h3>
-				<p>{image2.cost}</p>
+			<div className='game-page'>	
+				<div className='first-image'>
+					<button>
+						<img src={image1.img} alt="" />
+						<h3>{image1.name}</h3>
+						{/* <p>{image1.cost}</p> */}
+					</button>
+				</div>
+				<div className='second-image'>
+					<button>
+						<img src={image2.img} alt="" />
+						<h3>{image2.name}</h3>
+						{/* <p>{image2.cost}</p> */}
+					</button>
+				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

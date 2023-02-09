@@ -9,7 +9,9 @@ const App = ()=> {
 	const { isGameActive } = useGlobalContext()
 	return (
 		<main>
-			{isGameActive ? <GamePage /> : <Home />}
+			<div className='main-body'>
+				{isGameActive ? <GamePage /> : <Home />}
+			</div>
 		</main>
 	)
 }
