@@ -1,1 +1,2 @@
 swap image after response 
+show cost after response
