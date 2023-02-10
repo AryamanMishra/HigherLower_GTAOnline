@@ -1,3 +1,2 @@
 show cost after response
-add responsiveness
-set localstorage
+add responsiveness on gamepage
