@@ -10,7 +10,9 @@ html {
 	background-image: url('./background.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 100%;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100vh;
 }
 
 
@@ -19,14 +21,16 @@ html {
 
 
 .home-section {
-	width: 56em;
-    height: 30em;
-    margin: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 5em;
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 
@@ -368,4 +372,100 @@ html {
 	background-color: white;
 	color: black;
   	transition: all 0.2s ease-in;
+}
+
+
+@media only screen and (max-width:970px){
+	.title h1 {
+		font-size: 1.8em;
+	}
+	.start-btn{
+		font-size: 1.8em;
+	}
+	.github-button {
+		font-size: 3em;
+	}
+
+}	
+
+@media only screen and (max-width:605px){
+	.title h1 {
+		font-size: 1.5em;
+	}
+	.start-btn{
+		font-size: 1.5em;
+	}
+	.github-button {
+		font-size: 2.5em;
+	}
+}
+
+@media only screen and (max-width:475px){
+	.title h1 {
+		font-size: 1.1em;
+	}
+	.start-btn{
+		font-size: 1.1em;
+		width: 150px;
+	}
+}
+
+@media only screen and (max-width:362px){
+	.title h1 {
+		font-size: 1em;
+	}
+	.start-btn{
+		font-size: 1em;
+		width: 130px;
+	}
+}
+
+@media only screen and (max-width:335px){
+	.title h1 {
+		font-size: 0.8em;
+	}
+	.start-btn{
+		font-size: 0.9em;
+		width: 100px;
+	}
+	.github-button {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (max-width:280px){
+	.title h1 {
+		font-size: 0.75em;
+	}
+	.start-btn{
+		font-size: 0.8em;
+		width: 90px;
+	}
+}
+
+@media only screen and (max-width:268px){
+	.title h1 {
+		font-size: 0.6em;
+	}
+	.start-btn{
+		font-size: 0.7em;
+		width: 80px;
+	}
+	.github-button {
+		font-size: 1.75em;
+	}
+}
+
+
+@media only screen and (max-width:230px){
+	.title h1 {
+		font-size: 0.5em;
+	}
+	.start-btn{
+		font-size: 0.6em;
+		width: 60px;
+	}
+	.github-button {
+		font-size: 1.6em;
+	}
 }

@@ -5,6 +5,11 @@ import Cost from './Cost'
 import {weapons_data} from './data'
 import GameOverModal from './GameOverModal'
 
+
+
+
+
+
 const GamePage = ()=> {
 
 	const [image1,setImage1] = useState({})
@@ -80,6 +85,8 @@ const GamePage = ()=> {
 			},1000)
 		}
 	}
+
+
 
 	return (
 		<>
