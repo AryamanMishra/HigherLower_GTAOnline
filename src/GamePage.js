@@ -7,28 +7,29 @@ import GameOverModal from './GameOverModal'
 
 
 
+// let score = localStorage.getItem('score');
+// let isGameActive = localStorage.getItem('isGameActive');
 
-let gameObject = localStorage.getItem('gameObject')
-if (gameObject === null) {
-	gameObject = {isGameActive:false,image1:'',image2:'',score:0}
-}
-else {
-	gameObject = JSON.parse(localStorage.getItem('gameObject'))
-}
+// if (gameObject === null) {
+// 	gameObject = {isGameActive:true,score:0}
+// }
+// else {
+// 	gameObject = JSON.parse(localStorage.getItem('gameObject'))
+// }
 
 
 
 
 const GamePage = ()=> {
 	
-	const [image1,setImage1] = useState(gameObject.image1)
-	const [image2,setImage2] = useState(gameObject.image2)
+	const [image1,setImage1] = useState({})
+	const [image2,setImage2] = useState({})
 	const {score,increaseScore,closeGame} = useGlobalContext()
 	const [alert,setAlert] = useState({type:'none'})
 	const {showGameOverModal,openGameOverModal} = useGlobalContext()
 	const [showCost,setShowCost] = useState(false)
-	const [cost1,setCost1] = useState(gameObject.image1.cost)
-	const [cost2,setCost2] = useState(gameObject.image2.cost)
+	const [cost1,setCost1] = useState(0)
+	const [cost2,setCost2] = useState(0)
 	const {isGameActive} = useGlobalContext()
 
 	const StringToIntCost = (cost) =>{
@@ -39,15 +40,17 @@ const GamePage = ()=> {
 	
 	
 	useEffect(()=> {
-		if (score !== 0) {
+		setTimeout(()=> {
 			const shuffled = weapons_data.sort(() => 0.5 - Math.random());
 			let selected = shuffled.slice(0, 2);
 			setImage1(selected[0])
 			setImage2(selected[1])
 			setCost1(selected[0].cost)
 			setCost2(selected[1].cost)
-			localStorage.setItem('gameObject', JSON.stringify({isGameActive,image1,image2,score}))	
-		}
+			localStorage.setItem('score', score)	
+			localStorage.setItem('isGameActive', JSON.stringify (isGameActive))
+		},500)
+		
 	},[score])
 
 

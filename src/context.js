@@ -5,15 +5,16 @@ const AppContext = React.createContext()
 
 
 
-let gameObject = localStorage.getItem('gameObject');
-let activeGame = gameObject == null ? false : true;
-
+let score = localStorage.getItem('score');
+let isGameActive = localStorage.getItem('isGameActive');
+let activeGame = isGameActive === null ? false : true;
+let prevScore = score === null ? 0 : score
 
 
 
 const AppProvider = ({ children })=> {
 
-    const [score,setScore] = useState(0)
+    let [score,setScore] = useState(prevScore)
     const [isGameActive,setIsGameActive] = useState(activeGame)
     const [showGameOverModal,setShowGameOverModal] = useState(false)
 
@@ -23,7 +24,12 @@ const AppProvider = ({ children })=> {
         setScore(score)
     }
     const increaseScore = ()=> {
-        setScore(score+1)
+        if (typeof score === 'string') {
+            score = parseInt(score)
+            setScore(score+1)
+        }
+        else 
+            setScore(score+1)
     }
 
     const openGame = ()=> {
