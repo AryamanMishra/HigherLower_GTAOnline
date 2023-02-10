@@ -74,9 +74,9 @@ html {
 
 
 .footer {
-	/* background-color: rgb(6, 0, 17); */
+	/* border-top: 2px solid rgb(49, 0, 147); */
 	position: fixed;
-    bottom: 5%;
+    bottom: 3%;
     width: 100%;
 	height: auto;
 	display: flex;
@@ -85,6 +85,8 @@ html {
 }
 
 .github-button {
+	margin: auto;
+	padding-top: 0.5em;
 	cursor: pointer;
 	font-size: 2.5em;
 	background: transparent;
@@ -93,7 +95,7 @@ html {
 
 .github-button a {
 	text-decoration: none;
-	color: rgb(232, 248, 14)
+	color: rgb(118, 241, 243)
 }
 
 .github-button:hover {

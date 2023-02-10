@@ -29,7 +29,7 @@ const GamePage = ()=> {
 			setImage1(selected[0])
 			setImage2(selected[1])
 			setCost1(selected[0].cost)
-			setCost1(selected[1].cost)
+			setCost2(selected[1].cost)
 		},600)
 		
 	},[score])

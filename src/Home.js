@@ -15,7 +15,7 @@ const Home = ()=> {
 			</div>
 			<div className='footer'>
 				<button className='github-button'>
-					<a href="https://github.com/AryamanMishra/HigherLower_GTAOnline" target='_blank'>
+					<a href="https://github.com/AryamanMishra/HigherLower_GTAOnline" target='_blank' rel="noreferrer">
 						<FaGithubSquare />
 					</a>
 					
