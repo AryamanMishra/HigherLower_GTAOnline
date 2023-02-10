@@ -7,21 +7,20 @@ import GameOverModal from './GameOverModal'
 
 
 
-const getLocalStorage = ()=> {
-	let gameObject = localStorage.getItem('gameObject')
-	if (!gameObject) {
-		return {isGameActive:false,image1:{name:'',img:'',cost:0},image2:{name:'',img:'',cost:0},score:0}
-	}
-	else {
-		return JSON.parse(localStorage.getItem('gameObject'))
-	}
+
+let gameObject = localStorage.getItem('gameObject')
+if (gameObject === null) {
+	gameObject = {isGameActive:false,image1:'',image2:'',score:0}
 }
+else {
+	gameObject = JSON.parse(localStorage.getItem('gameObject'))
+}
+
 
 
 
 const GamePage = ()=> {
 	
-	const gameObject = getLocalStorage()
 	const [image1,setImage1] = useState(gameObject.image1)
 	const [image2,setImage2] = useState(gameObject.image2)
 	const {score,increaseScore,closeGame} = useGlobalContext()
@@ -40,16 +39,13 @@ const GamePage = ()=> {
 	
 	
 	useEffect(()=> {
-		setTimeout(()=> {
-			const shuffled = weapons_data.sort(() => 0.5 - Math.random());
-			let selected = shuffled.slice(0, 2);
-			setImage1(selected[0])
-			setImage2(selected[1])
-			setCost1(selected[0].cost)
-			setCost2(selected[1].cost)
-			localStorage.setItem('gameObject', JSON.stringify({isGameActive,image1,image2,score}))
-		},600)
-		
+		const shuffled = weapons_data.sort(() => 0.5 - Math.random());
+		let selected = shuffled.slice(0, 2);
+		setImage1(selected[0])
+		setImage2(selected[1])
+		setCost1(selected[0].cost)
+		setCost2(selected[1].cost)
+		localStorage.setItem('gameObject', JSON.stringify({isGameActive,image1,image2,score}))	
 	},[score])
 
 
