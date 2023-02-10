@@ -3,11 +3,16 @@ import React, { useContext,useState } from "react"
 
 const AppContext = React.createContext()
 
+
+
 const AppProvider = ({ children })=> {
+
 
     const [score,setScore] = useState(0)
     const [isGameActive,setIsGameActive] = useState(false)
     const [showGameOverModal,setShowGameOverModal] = useState(false)
+
+
 
     const decideScore = (score)=> {
         setScore(score)

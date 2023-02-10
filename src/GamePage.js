@@ -7,19 +7,29 @@ import GameOverModal from './GameOverModal'
 
 
 
+const getLocalStorage = ()=> {
+	let gameObject = localStorage.getItem('gameObject')
+	if (gameObject.isGameActive) {
+		return JSON.parse(localStorage.getItem('gameObject'))
+	}
+	else {
+		return {}
+	}
+}
 
 
 
 const GamePage = ()=> {
-
-	const [image1,setImage1] = useState({})
-	const [image2,setImage2] = useState({})
+	const gameObject = getLocalStorage()
+	const [image1,setImage1] = useState(gameObject.image1)
+	const [image2,setImage2] = useState(gameObject.image1)
 	const {score,increaseScore,closeGame} = useGlobalContext()
 	const [alert,setAlert] = useState({type:'none'})
 	const {showGameOverModal,openGameOverModal} = useGlobalContext()
 	const [showCost,setShowCost] = useState(false)
-	const [cost1,setCost1] = useState(0)
-	const [cost2,setCost2] = useState(0)
+	const [cost1,setCost1] = useState(gameObject.image1.cost)
+	const [cost2,setCost2] = useState(gameObject.image2.cost)
+	const {isGameActive} = useGlobalContext()
 
 	const StringToIntCost = (cost) =>{
 		cost = cost.replace(/[^0-9 ]/g, "")
@@ -35,6 +45,7 @@ const GamePage = ()=> {
 			setImage2(selected[1])
 			setCost1(selected[0].cost)
 			setCost2(selected[1].cost)
+			localStorage.setItem('gameObject', JSON.stringify({isGameActive,image1,image2,score}))
 		},600)
 		
 	},[score])
