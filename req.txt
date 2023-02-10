@@ -1,2 +1,3 @@
 show cost after response
 add responsiveness
+set localstorage
