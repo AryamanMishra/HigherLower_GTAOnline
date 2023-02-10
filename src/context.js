@@ -5,11 +5,16 @@ const AppContext = React.createContext()
 
 
 
+let gameObject = localStorage.getItem('gameObject');
+let activeGame = gameObject == null ? false : true;
+
+
+
+
 const AppProvider = ({ children })=> {
 
-
     const [score,setScore] = useState(0)
-    const [isGameActive,setIsGameActive] = useState(false)
+    const [isGameActive,setIsGameActive] = useState(activeGame)
     const [showGameOverModal,setShowGameOverModal] = useState(false)
 
 

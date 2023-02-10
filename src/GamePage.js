@@ -20,6 +20,7 @@ const getLocalStorage = ()=> {
 
 
 const GamePage = ()=> {
+	
 	const gameObject = getLocalStorage()
 	const [image1,setImage1] = useState(gameObject.image1)
 	const [image2,setImage2] = useState(gameObject.image1)
@@ -36,6 +37,7 @@ const GamePage = ()=> {
 		cost = parseInt(cost)
 		return cost
 	}
+	
 	
 	useEffect(()=> {
 		setTimeout(()=> {
