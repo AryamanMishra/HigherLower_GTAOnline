@@ -9,11 +9,11 @@ import GameOverModal from './GameOverModal'
 
 const getLocalStorage = ()=> {
 	let gameObject = localStorage.getItem('gameObject')
-	if (gameObject.isGameActive) {
-		return JSON.parse(localStorage.getItem('gameObject'))
+	if (!gameObject) {
+		return {isGameActive:false,image1:{name:'',img:'',cost:0},image2:{name:'',img:'',cost:0},score:0}
 	}
 	else {
-		return {}
+		return JSON.parse(localStorage.getItem('gameObject'))
 	}
 }
 
@@ -23,7 +23,7 @@ const GamePage = ()=> {
 	
 	const gameObject = getLocalStorage()
 	const [image1,setImage1] = useState(gameObject.image1)
-	const [image2,setImage2] = useState(gameObject.image1)
+	const [image2,setImage2] = useState(gameObject.image2)
 	const {score,increaseScore,closeGame} = useGlobalContext()
 	const [alert,setAlert] = useState({type:'none'})
 	const {showGameOverModal,openGameOverModal} = useGlobalContext()
