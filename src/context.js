@@ -5,20 +5,55 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children })=> {
 
+    const [score,setScore] = useState(0)
     const [isGameActive,setIsGameActive] = useState(false)
+    const [showGameOverModal,setShowGameOverModal] = useState(false)
+
+    const decideScore = (score)=> {
+        setScore(score)
+    }
+    const increaseScore = ()=> {
+        setScore(score+1)
+    }
 
     const openGame = ()=> {
         setIsGameActive(true)
     }
+
     const closeGame = ()=> {
         setIsGameActive(false)
+        setShowGameOverModal(false)
+        decideScore(0)
     }
+
+    const openGameOverModal = ()=> {
+        setShowGameOverModal(true)
+    }
+
+    const closeGameOverModal = ()=> {
+        setShowGameOverModal(false)
+    }
+
+    const restartGame = ()=> {
+        decideScore(0)
+        setTimeout(()=> {
+            setShowGameOverModal(false)
+        },250)
+    }
+
     return (
         <AppContext.Provider
             value={{
+                score,
+                increaseScore,
                 isGameActive,
                 openGame,
-                closeGame
+                closeGame,
+                showGameOverModal,
+                openGameOverModal,
+                closeGameOverModal,
+                restartGame,
+                decideScore
             }}    
         >
             {children}

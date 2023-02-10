@@ -20,7 +20,7 @@ html {
 
 .home-section {
 	width: 56em;
-    height: 32em;
+    height: 30em;
     margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -73,8 +73,33 @@ html {
 
 
 
+.footer {
+	/* background-color: rgb(6, 0, 17); */
+	position: fixed;
+    bottom: 5%;
+    width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.github-button {
+	cursor: pointer;
+	font-size: 2.5em;
+	background: transparent;
+	border: none;
+}
 
+.github-button a {
+	text-decoration: none;
+	color: rgb(232, 248, 14)
+}
+
+.github-button:hover {
+	transform: scale(1.1);
+	box-shadow: rgba(245, 245, 255, 0.733) 5px 7px 7px 0px;
+}
 
 
 .game-page {
@@ -83,7 +108,7 @@ html {
 	justify-content: center;
 	gap: 10em;
 	margin: auto;
-	margin-top: 8em;
+	margin-top: 6em;
 }
 
 .game-page button {
@@ -122,12 +147,13 @@ html {
 
 .first-image {
 	width: 25em;
-	height: 25em;
+	height: 24em;
 }
 
 .first-image:hover {
 	border: 2px solid white;
 	border-radius: 20px;
+	transition: 0.15s linear;
 }
 
 .first-image img {
@@ -156,37 +182,38 @@ html {
 }
 
 .alert-none {
+	border: 1px solid white;
 	color: white;
 	text-align: center;
-	padding: 0.38em 0.7em;
+	padding: 0.36em 0.6em;
 	width: 2em;
 	height: 2em;
-	font-size: 2.4em;
+	font-size: 2em;
 	border-radius: 50%;
 	background-color: rgb(11, 0, 31);
 }
 
 
 .alert-success {
-	background-color: green;
+	background-color: rgb(1, 104, 1);
 	color:white;
 	text-align: center;
 	padding: 0.5em 0.3em;
 	width: 2em;
 	height: 2em;
-	font-size: 2.4em;
+	font-size: 2em;
 	border-radius: 50%;
 }
 
 
 .alert-failure {
-	background-color: red;
+	background-color: rgb(184, 3, 3);
 	color:white;
 	text-align: center;
 	padding: 0.5em 0.3em;
 	width: 2em;
 	height: 2em;
-	font-size: 2.4em;
+	font-size: 2em;
 	border-radius: 50%;
 }
 
@@ -194,7 +221,7 @@ html {
 
 .second-image {
 	width: 25em;
-	height: 25em;
+	height: 24em;
 }
 
 
@@ -228,4 +255,115 @@ html {
 .second-image:hover {
 	border: 2px solid white;
 	border-radius: 20px;
+	transition: 0.15s linear;
+}
+
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.689);
+	visibility: hidden;
+	place-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: -1;
+}
+
+.show-modal {
+	visibility: visible;
+	z-index: 10;
+}
+
+
+.modal-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.75em;
+	width: 35vw;
+	height: 45vh;
+	background-color: rgb(6, 0, 16);
+	border-radius: 30px;
+	position: relative;
+}
+
+.modal-container h3 {
+	color: white;
+	text-transform: capitalize;
+	letter-spacing: 1.5px;
+	font-size: 1.75em;
+	font-family: 'Raleway', sans-serif;
+}
+
+.modal-container p {
+	color:white;
+	font-size: 2em;
+	font-family: 'Raleway', sans-serif;
+}
+
+.modal-btn-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2em;
+	margin-top: 1.5em;
+}
+
+.modal-btn-container button {
+	font-family: 'Raleway', sans-serif;
+	border-radius: 30px;
+	cursor: pointer;
+	width: 220px;
+	background-color: black;
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	padding: 0.25em 0.5em;
+	letter-spacing: 1px;
+	border: 1px solid white;
+	font-weight: 500;
+}
+
+.modal-btn-container button:hover {
+	background-color: white;
+	color: black;
+  	transition: all 0.2s ease-in;
+	font-weight: 800;
+}
+
+.cost-container p {
+	color:white
+}
+
+.closeGame-gamepage {
+	width: 180px;
+    height: 30px;
+    
+    position: absolute;
+    top:80%;
+    bottom: 0;
+    left: 0.5%;
+    right: 0;
+    
+    margin: auto;
+}
+
+.closeGame-gamepage button {
+	border-radius: 20px;
+	cursor: pointer;
+	background-color: black;
+	color: rgb(255, 255, 255);
+	font-size: 0.95em;
+	padding: 0.5em 1em;
+	letter-spacing: 1.5px;
+}
+
+.closeGame-gamepage button:hover {
+	background-color: white;
+	color: black;
+  	transition: all 0.2s ease-in;
 }
