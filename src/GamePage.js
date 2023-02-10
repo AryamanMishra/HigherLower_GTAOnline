@@ -39,13 +39,15 @@ const GamePage = ()=> {
 	
 	
 	useEffect(()=> {
-		const shuffled = weapons_data.sort(() => 0.5 - Math.random());
-		let selected = shuffled.slice(0, 2);
-		setImage1(selected[0])
-		setImage2(selected[1])
-		setCost1(selected[0].cost)
-		setCost2(selected[1].cost)
-		localStorage.setItem('gameObject', JSON.stringify({isGameActive,image1,image2,score}))	
+		if (score !== 0) {
+			const shuffled = weapons_data.sort(() => 0.5 - Math.random());
+			let selected = shuffled.slice(0, 2);
+			setImage1(selected[0])
+			setImage2(selected[1])
+			setCost1(selected[0].cost)
+			setCost2(selected[1].cost)
+			localStorage.setItem('gameObject', JSON.stringify({isGameActive,image1,image2,score}))	
+		}
 	},[score])
 
 
