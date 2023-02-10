@@ -1,2 +1,2 @@
 show cost after response
-add responsiveness on gamepage
+add comments
