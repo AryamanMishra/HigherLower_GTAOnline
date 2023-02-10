@@ -112,7 +112,7 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10em;
+	gap: 8em;
 	margin: auto;
 	margin-top: 6em;
 }
@@ -346,26 +346,23 @@ html {
 }
 
 .closeGame-gamepage {
-	width: 180px;
-    height: 30px;
-    
-    position: absolute;
-    top:80%;
-    bottom: 0;
-    left: 0.5%;
-    right: 0;
-    
-    margin: auto;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	margin-top: 6em;
 }
 
 .closeGame-gamepage button {
+	width: 300px;
 	border-radius: 20px;
 	cursor: pointer;
 	background-color: black;
 	color: rgb(255, 255, 255);
-	font-size: 0.95em;
-	padding: 0.5em 1em;
+	font-size: 1.2em;
+	padding: 0.5em 1.4em;
 	letter-spacing: 1.5px;
+	margin-bottom: 3em;
 }
 
 .closeGame-gamepage button:hover {
@@ -467,5 +464,339 @@ html {
 	}
 	.github-button {
 		font-size: 1.6em;
+	}
+}
+
+
+
+
+
+@media only screen and (max-width:1000px){
+	.game-page {
+		margin-top: 7em;
+	}
+	.first-image {
+		width: 52vw;
+		height: 34vh;
+	}
+	.second-image {
+		width: 52vw;
+		height: 34vh;
+	}
+	.first-image img {
+		width: 340px;
+	}
+	.first-image h3 {
+		font-size: 1.72em;
+		width: 350px;
+	}
+	.second-image img {
+		width: 340px;
+	}
+	.second-image h3 {
+		font-size: 1.72em;
+		width: 360px;
+	}
+	.alert-none {
+		font-size: 2.6em;
+	}
+	.game-title {
+		width: 650px;
+	}
+	.game-page {
+		gap: 4em;
+		flex-direction: column;
+	}
+	.closeGame-gamepage {
+		width: 100%;
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width:900px){
+	.game-title h2 {
+		font-size: 1.65em;
+	}
+	.game-page {
+		flex-direction: column;
+		gap: 3em;
+	}
+	.game-title {
+		width: 70vw;
+	}
+	.closeGame-gamepage button {
+		font-size: 1.1em;
+		margin-bottom: 3em;
+	}
+	.alert-none {
+		font-size: 1.75em;
+	}
+	.alert-failure {
+		font-size: 1.75em;
+	}
+	.alert-success {
+		font-size: 1.75em;
+	}
+	.modal-container {
+		width: 46vw;
+		height: 53vh;
+	}
+	.modal-container h3 {
+		font-size: 1.8em;
+	}
+	.modal-container p {
+		font-size: 2em;
+	}
+	.modal-btn-container button {
+		font-size: 1em;
+		width: 200px;
+	}
+	.first-image {
+		width: 27em;
+		height: 27em;
+	}
+	.second-image {
+		width: 27em;
+		height: 27em;
+	}
+	.first-image img {
+		width: 260px;
+	}
+	.second-image img {
+		width: 260px;
+	}
+	.first-image h3 {
+		font-size: 1.4em;
+	}
+	.second-image h3 {
+		font-size: 1.4em;
+	}
+}
+
+
+@media only screen and (max-width:660px){
+	.game-page {
+		gap: 3.2em;
+	}
+	.game-title {
+		width: 65vw;
+	}
+	.game-title h2 {
+		font-size: 1.4em;
+	}
+	.closeGame-gamepage button {
+		font-size: 1.1em;
+		margin-bottom: 3em;
+	}
+	.modal-container {
+		width: 62vw;
+		height: 52vh;
+	}
+	.modal-container h3 {
+		font-size: 1.7em;
+	}
+	.modal-container p {
+		font-size: 1.9em;
+	}
+	.modal-btn-container button {
+		font-size: 0.973em;
+		width: 190px;
+	}
+	.first-image {
+		width: 26em;
+		height: 26em;
+	}
+	.second-image {
+		width: 26em;
+		height: 26em;
+	}
+	.first-image img {
+		width: 260px;
+	}
+	.second-image img {
+		width: 260px;
+	}
+	.first-image h3 {
+		font-size: 1.3em;
+		width: 280px;
+	}
+	.second-image h3 {
+		font-size: 1.3em;
+		width: 280px;
+	}
+}
+
+@media only screen and (max-width:560px){
+	.game-page {
+		gap: 2em;
+	}
+	.game-title h2 {
+		font-size: 1.1em;
+	}
+	.first-image {
+		width: 17em;
+		height: 17em;
+	}
+	.second-image {
+		width: 17em;
+		height: 17em;
+	}
+	.first-image img {
+		width: 210px;
+	}
+	.first-image h3 {
+		font-size: 1.1em;
+		width: 200px;
+	}
+	.second-image img {
+		width: 210px;
+	}
+	.second-image h3 {
+		font-size: 1.1em;
+		width: 200px;
+	}
+	.closeGame-gamepage button {
+		width: 255px;
+		font-size: 0.92em;
+	}
+	.alert-none {
+		font-size: 1.65em;
+	}
+	.alert-failure {
+		font-size: 1.65em;
+	}
+	.alert-success {
+		font-size: 1.65em;
+	}
+	.modal-container {
+		width: 65vw;
+		height: 52vh;
+	}
+	.modal-container h3 {
+		font-size: 1.6em;
+	}
+	.modal-container p {
+		font-size: 1.8em;
+	}
+	.modal-btn-container button {
+		font-size: 0.95em;
+		width: 190px;
+	}
+}
+
+@media only screen and (max-width:330px){
+	.game-page {
+		gap: 2.5em;
+	}
+	.game-title h2 {
+		font-size: 0.95em;
+	}
+	.first-image {
+		width: 15em;
+		height: 15em;
+	}
+	.second-image {
+		width: 15em;
+		height: 15em;
+	}
+	.first-image img {
+		width: 200px;
+	}
+	.first-image h3 {
+		font-size: 1em;
+		width: 220px;
+	}
+	.second-image img {
+		width: 210px;
+	}
+	.second-image h3 {
+		font-size: 1em;
+		width: 220px;
+	}
+	.closeGame-gamepage button {
+		font-size: 0.85em;
+		width: 230px;
+	}
+	.alert-none {
+		font-size: 1.4em;
+	}
+	.alert-failure {
+		font-size: 1.4em;
+	}
+	.alert-success {
+		font-size: 1.4em;
+	}
+	.modal-container {
+		width: 88vw;
+		height: 55vh;
+	}
+	.modal-container h3 {
+		font-size: 1.4em;
+	}
+	.modal-container p {
+		font-size: 1.8em;
+	}
+	.modal-btn-container button {
+		font-size: 0.9em;
+		width: 175px;
+	}
+}
+
+
+@media only screen and (max-width:250px){
+	.game-page {
+		gap: 2.9em;
+	}
+	.game-title h2 {
+		font-size: 0.8em;
+	}
+	.first-image {
+		width: 14em;
+		height: 17em;
+	}
+	.second-image {
+		width: 14em;
+		height: 17em;
+	}
+	.first-image img {
+		width: 170px;
+	}
+	.first-image h3 {
+		font-size: 0.9em;
+		width: 200px;
+	}
+	.second-image img {
+		width: 170px;
+	}
+	.second-image h3 {
+		font-size: 1em;
+		width: 200px;
+	}
+	.closeGame-gamepage button {
+		width: 210px;
+		font-size: 0.8em;
+	}
+	.alert-none {
+		font-size: 1.3em;
+	}
+	.alert-failure {
+		font-size: 1.3em;
+	}
+	.alert-success {
+		font-size: 1.3em;
+	}
+	.modal-container {
+		width: 90vw;
+		height: 55vh;
+	}
+	.modal-container h3 {
+		font-size: 1.2em;
+	}
+	.modal-container p {
+		font-size: 1.75em;
+	}
+	.modal-btn-container button {
+		font-size: 0.76em;
+		width: 155px;
 	}
 }

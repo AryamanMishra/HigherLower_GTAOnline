@@ -105,7 +105,7 @@ const GamePage = ()=> {
 	return (
 		<>
 			<div className='game-title'>
-					<h2>which one is costlier??</h2>
+					<h2>which costs more??</h2>
 			</div>
 			<div className='game-page'>	
 				<div className='first-image'>
