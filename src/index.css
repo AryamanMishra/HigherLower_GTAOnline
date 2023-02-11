@@ -12,7 +12,11 @@ html {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	height: 100%;
+	width: 100%;
 }
 
 
@@ -395,7 +399,7 @@ html {
 	.github-button {
 		font-size: 2.5em;
 	}
-	body {
+	html {
 		background-attachment:scroll;
 	}
 }
@@ -408,7 +412,7 @@ html {
 		font-size: 1.1em;
 		width: 150px;
 	}
-	body {
+	html {
 		background-attachment:scroll;
 	}
 }
@@ -420,6 +424,9 @@ html {
 	.start-btn{
 		font-size: 1em;
 		width: 130px;
+	}
+	html {
+		background-attachment:scroll;
 	}
 }
 
@@ -434,7 +441,7 @@ html {
 	.github-button {
 		font-size: 2em;
 	}
-	body {
+	html {
 		background-attachment:scroll;
 	}
 }
@@ -447,7 +454,7 @@ html {
 		font-size: 0.8em;
 		width: 90px;
 	}
-	body {
+	html {
 		background-attachment:scroll;
 	}
 }
@@ -463,7 +470,7 @@ html {
 	.github-button {
 		font-size: 1.75em;
 	}
-	body {
+	html {
 		background-attachment:scroll;
 	}
 }
@@ -480,7 +487,7 @@ html {
 	.github-button {
 		font-size: 1.6em;
 	}
-	body {
+	html {
 		background-attachment:scroll;
 	}
 }
@@ -642,14 +649,11 @@ html {
 		font-size: 1.3em;
 		width: 280px;
 	}
-	body {
-		background-attachment:scroll;
-	}
 }
 
 @media only screen and (max-width:560px){
-	body {
-		background-attachment:scroll;
+	html {
+		background-attachment:scroll
 	}
 	.game-page {
 		gap: 2em;
@@ -709,7 +713,7 @@ html {
 }
 
 @media only screen and (max-width:330px){
-	body {
+	html {
 		background-attachment:scroll;
 	}
 	.game-page {
@@ -771,7 +775,7 @@ html {
 
 
 @media only screen and (max-width:250px){
-	body {
+	html {
 		background-attachment:scroll;
 	}
 	.game-page {
