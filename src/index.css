@@ -12,11 +12,7 @@ html {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	height: 100%;
-	width: 100%;
+	height: 100vh;
 }
 
 
@@ -399,9 +395,6 @@ html {
 	.github-button {
 		font-size: 2.5em;
 	}
-	html {
-		background-attachment:scroll;
-	}
 }
 
 @media only screen and (max-width:475px){
@@ -412,9 +405,6 @@ html {
 		font-size: 1.1em;
 		width: 150px;
 	}
-	html {
-		background-attachment:scroll;
-	}
 }
 
 @media only screen and (max-width:362px){
@@ -424,9 +414,6 @@ html {
 	.start-btn{
 		font-size: 1em;
 		width: 130px;
-	}
-	html {
-		background-attachment:scroll;
 	}
 }
 
@@ -441,9 +428,6 @@ html {
 	.github-button {
 		font-size: 2em;
 	}
-	html {
-		background-attachment:scroll;
-	}
 }
 
 @media only screen and (max-width:280px){
@@ -453,9 +437,6 @@ html {
 	.start-btn{
 		font-size: 0.8em;
 		width: 90px;
-	}
-	html {
-		background-attachment:scroll;
 	}
 }
 
@@ -469,9 +450,6 @@ html {
 	}
 	.github-button {
 		font-size: 1.75em;
-	}
-	html {
-		background-attachment:scroll;
 	}
 }
 
@@ -487,10 +465,9 @@ html {
 	.github-button {
 		font-size: 1.6em;
 	}
-	html {
-		background-attachment:scroll;
-	}
 }
+
+
 
 
 
@@ -499,14 +476,15 @@ html {
 @media only screen and (max-width:1000px){
 	.game-page {
 		margin-top: 7em;
+		gap: 3.5em;
 	}
 	.first-image {
 		width: 52vw;
-		height: 34vh;
+		height: 45vh;
 	}
 	.second-image {
 		width: 52vw;
-		height: 34vh;
+		height: 45vh;
 	}
 	.first-image img {
 		width: 340px;
@@ -523,7 +501,7 @@ html {
 		width: 360px;
 	}
 	.alert-none {
-		font-size: 2.6em;
+		font-size: 2.35em;
 	}
 	.game-title {
 		width: 650px;
@@ -554,13 +532,13 @@ html {
 		margin-bottom: 3em;
 	}
 	.alert-none {
-		font-size: 1.75em;
+		font-size: 1.8em;
 	}
 	.alert-failure {
-		font-size: 1.75em;
+		font-size: 1.8em;
 	}
 	.alert-success {
-		font-size: 1.75em;
+		font-size: 1.8em;
 	}
 	.modal-container {
 		width: 46vw;
@@ -652,11 +630,8 @@ html {
 }
 
 @media only screen and (max-width:560px){
-	html {
-		background-attachment:scroll
-	}
 	.game-page {
-		gap: 2em;
+		gap: 2.3em;
 	}
 	.game-title h2 {
 		font-size: 1.1em;
@@ -688,13 +663,13 @@ html {
 		font-size: 0.92em;
 	}
 	.alert-none {
-		font-size: 1.65em;
+		font-size: 1.5em;
 	}
 	.alert-failure {
-		font-size: 1.65em;
+		font-size: 1.5em;
 	}
 	.alert-success {
-		font-size: 1.65em;
+		font-size: 1.5em;
 	}
 	.modal-container {
 		width: 65vw;
@@ -713,9 +688,6 @@ html {
 }
 
 @media only screen and (max-width:330px){
-	html {
-		background-attachment:scroll;
-	}
 	.game-page {
 		gap: 2.5em;
 	}
@@ -775,9 +747,6 @@ html {
 
 
 @media only screen and (max-width:250px){
-	html {
-		background-attachment:scroll;
-	}
 	.game-page {
 		gap: 2.9em;
 	}
