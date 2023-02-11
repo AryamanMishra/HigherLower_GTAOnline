@@ -19,7 +19,6 @@ const AppProvider = ({ children })=> {
     const [showGameOverModal,setShowGameOverModal] = useState(false)
 
 
-
     const decideScore = (score)=> {
         setScore(score)
     }
@@ -39,6 +38,7 @@ const AppProvider = ({ children })=> {
     const closeGame = ()=> {
         setIsGameActive(false)
         setShowGameOverModal(false)
+        localStorage.clear()
         decideScore(0)
     }
 
