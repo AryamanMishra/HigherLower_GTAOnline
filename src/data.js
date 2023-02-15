@@ -438,6 +438,7 @@ const weapons_data = [
 const assignImageFromName = (weapon)=> {
     let name = weapon['name']
     name = name.replace(/ /g, '');
+    name = name.replace(/-/g, '');
     name += '-GTAO.jpeg'
     weapon['img'] = images[name] 
 }
