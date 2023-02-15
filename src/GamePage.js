@@ -51,6 +51,11 @@ const GamePage = ()=> {
 
 	// converting cost to int after replacing all the special characters with "" 
 	const StringToIntCost = (cost) =>{
+
+		if (cost === 'FREE') {
+			cost = 0
+			return cost
+		}
 		cost = cost.replace(/[^0-9 ]/g, "")
 		cost = parseInt(cost)
 		return cost
@@ -60,6 +65,12 @@ const GamePage = ()=> {
 
 	// useEffect to fetch 2 random images from weapons data
 	useEffect(()=> {
+
+
+		/* the function content is same in both conditions except the delay */
+
+		// this part runs when user first starts the game or restarts the game after loosing
+		// this part has low delay to render both images quickly when the app is started or the game is restarted
 		if (localStorage.getItem('score') === null || score === 0) {
 			setTimeout(()=> {
 				const shuffled = weapons_data.sort(() => 0.5 - Math.random());
@@ -80,6 +91,11 @@ const GamePage = ()=> {
 			},300)
 		}
 
+
+
+		// this part runs between a correct response and new images being rendered after that response
+		// this part has higher delay to show cost of the previous items for an appropriate interval 
+		// and to properly display new images after previous response
 		else {
 			setTimeout(()=> {
 				const shuffled = weapons_data.sort(() => 0.5 - Math.random());
@@ -97,7 +113,7 @@ const GamePage = ()=> {
 	
 				// saving isGameActive to localstorage
 				localStorage.setItem('isGameActive', JSON.stringify (isGameActive))
-			},1000)
+			},1100)
 		}
 		
 		
@@ -123,52 +139,53 @@ const GamePage = ()=> {
 			// correct answer
 			if (price1 > price2) {
 
+				// show cost after response
 				setShowCost(true)
 
+				// show correct answer icon after 400ms delay
 				setTimeout(()=> {
-
-					// correct answer alert
-					setAlert({type:'success'})
-
-					// increase score by 1
-					increaseScore()
+					setAlert({type:'success'}) // correct answer alert
+					increaseScore() // increase score by 1
 				},400)
 				
 
+				// hide cost after 1.5s delay
 				setTimeout(()=> {
 					setShowCost(false)
-				},1400)
+				},1500)
 				
 
-				// show the score again after 1.5s
+				// show the score again 
 				setTimeout(()=> {
 					setAlert({type:'none'})	
-				},1400)
+				},1500)
 			}
 
 
 			// incorrect answer
 			else {
 
+				// show cost after response
 				setShowCost(true)
-				// incorrect answer alert
-				setTimeout(()=> {
 
-					// incorrect answer alert
-					setAlert({type:'failure'})
+				// show incorrect answer icon after 400ms delay
+				setTimeout(()=> {
+					setAlert({type:'failure'}) // incorrect answer alert
 				},400)
 
+
+				// hide cost after 1s delay
 				setTimeout(()=> {
 					setShowCost(false)
-				},1000)
+				},1200)
 
-				// show the score again after 1.1s
+
+				// show game over prompt
 				setTimeout(()=> {
 					setAlert({type:'none'})
 
-					// show game over modal
-					openGameOverModal(true)
-				},1000)
+					openGameOverModal(true) // show game over modal
+				},1200)
 			}
 		}
 
@@ -181,7 +198,6 @@ const GamePage = ()=> {
 				setShowCost(true)
 
 				setTimeout(()=> {
-
 					// correct answer alert
 					setAlert({type:'success'})
 
@@ -192,12 +208,12 @@ const GamePage = ()=> {
 
 				setTimeout(()=> {
 					setShowCost(false)
-				},1400)
+				},1500)
 
 				// show the score again after 1.5s
 				setTimeout(()=> {
 					setAlert({type:'none'})	
-				},1400)
+				},1500)
 			}
 
 			// incorrect answer
@@ -212,15 +228,15 @@ const GamePage = ()=> {
 
 				setTimeout(()=> {
 					setShowCost(false)
-				},1000)
+				},1200)
 
-				// show the score again after 1.1s
+				// show the score again after 1s
 				setTimeout(()=> {
 					setAlert({type:'none'})
 
 					// show game over modal
 					openGameOverModal(true)
-				},1000)
+				},1200)
 			}
 		}
 	}

@@ -196,13 +196,16 @@ body {
 }
 
 .alert-none {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid white;
 	color: white;
 	text-align: center;
 	padding: 0.36em 0.6em;
 	width: 2em;
 	height: 2em;
-	font-size: 2em;
+	font-size: 1.8em;
 	border-radius: 50%;
 	background-color: rgb(11, 0, 31);
 }
@@ -215,7 +218,7 @@ body {
 	padding: 0.5em 0.3em;
 	width: 2em;
 	height: 2em;
-	font-size: 2em;
+	font-size: 1.8em;
 	border-radius: 50%;
 }
 
@@ -227,7 +230,7 @@ body {
 	padding: 0.5em 0.3em;
 	width: 2em;
 	height: 2em;
-	font-size: 2em;
+	font-size: 1.8em;
 	border-radius: 50%;
 }
 
@@ -310,15 +313,16 @@ body {
 .modal-container h3 {
 	color: white;
 	text-transform: capitalize;
-	letter-spacing: 1.5px;
+	letter-spacing: 1.8px;
 	font-size: 1.75em;
 	font-family: 'Raleway', sans-serif;
 }
 
 .modal-container p {
 	color:white;
-	font-size: 2em;
-	font-family: 'Raleway', sans-serif;
+	font-size: 1.8em;
+	letter-spacing: 2px;
+	font-family: 'Rubik', sans-serif;
 }
 
 .modal-btn-container {
@@ -378,6 +382,24 @@ body {
 	color: black;
   	transition: all 0.2s ease-in;
 }
+
+
+.cost-container {
+	margin-top: 1em;
+}
+.cost-container p{
+	font-size: 1.25em;
+	letter-spacing: 1.8px;
+	font-family: 'Rubik', sans-serif;
+}
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width:970px){
@@ -484,7 +506,7 @@ body {
 @media only screen and (max-width:1000px){
 	.game-page {
 		margin-top: 7em;
-		gap: 3.5em;
+		gap: 4em;
 	}
 	.first-image {
 		width: 52vw;

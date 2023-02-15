@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // show costs
-const Cost = ({ cost,which })=> {
+const Cost = ({ cost })=> {
     return (
         <div className='cost-container'>
             <p>{cost}</p>
