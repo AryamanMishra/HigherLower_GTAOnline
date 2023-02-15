@@ -1,2 +1,3 @@
-show cost after response
+fix responsiveness more
+make font smoother
 add comments in index.css
