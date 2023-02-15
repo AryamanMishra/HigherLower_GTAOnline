@@ -21,6 +21,7 @@ body {
     background-size: cover;
     height:100%;
     width:100%; 
+	
 }
 
 
@@ -48,6 +49,9 @@ body {
 }
 
 .title h1 {
+	/* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility; */
 	letter-spacing: 1.5px;
 	font-size: 2em;
 	color: white;
