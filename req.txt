@@ -1,2 +1,2 @@
 show cost after response
-add comments
+add comments in index.css
