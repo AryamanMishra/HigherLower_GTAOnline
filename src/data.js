@@ -1,4 +1,5 @@
 
+// to dynmaically import all the images from the 'images' folder
 function importAll(r) {
     let images = {};
     r.keys().map(item => { return images[item.replace('./', '')] = r(item); });
@@ -6,8 +7,10 @@ function importAll(r) {
 }
 
 const images = importAll(require.context('./images', false, /\.jpeg/));
+// to dynmaically import all the images from the 'images' folder
 
 
+// all weapons data
 const weapons_data = [
     {
         'name' : 'Knuckle Dusters',
@@ -425,8 +428,13 @@ const weapons_data = [
         'cost' : '$1,000'
     },
 ]
+// all weapons data
 
 
+
+// making a weapon name same as its image name by removing all the spaces and then appending it with the string "-GTAO.jpeg"
+// this makes it easy to fetch the image directly from the name of the weapon
+// for example to fetch the image for Sticky Bomb we make it "StickyBomb-GTAO.jpeg" which is its image name in 'images' folder
 const assignImageFromName = (weapon)=> {
     let name = weapon['name']
     name = name.replace(/ /g, '');
@@ -434,6 +442,9 @@ const assignImageFromName = (weapon)=> {
     weapon['img'] = images[name] 
 }
 
+
+
+// calling the above method for all the weapons
 for (let i=0;i<weapons_data.length;i++) {
     assignImageFromName(weapons_data[i])
 }

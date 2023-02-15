@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+// show costs
 const Cost = ({ cost,which })=> {
     return (
         <div className='cost-container'>
