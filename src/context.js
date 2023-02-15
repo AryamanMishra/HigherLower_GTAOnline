@@ -83,12 +83,12 @@ const AppProvider = ({ children })=> {
 
     // restart game if user chooses restart in gameover prompt
     const restartGame = ()=> {
-        decideScore(0)in
+        decideScore(0)
 
         // delayed close modal so that images can load in the background
         setTimeout(()=> {
             setShowGameOverModal(false)
-        },250)
+        },300)
     }
 
 

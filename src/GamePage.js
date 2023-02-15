@@ -60,25 +60,48 @@ const GamePage = ()=> {
 
 	// useEffect to fetch 2 random images from weapons data
 	useEffect(()=> {
-		setTimeout(()=> {
-			const shuffled = weapons_data.sort(() => 0.5 - Math.random());
-			let selected = shuffled.slice(0, 2);
+		if (localStorage.getItem('score') === null || score === 0) {
+			setTimeout(()=> {
+				const shuffled = weapons_data.sort(() => 0.5 - Math.random());
+				let selected = shuffled.slice(0, 2);
+	
+				// set state variables to the random images
+				setImage1(selected[0])
+				setImage2(selected[1])
+				setCost1(selected[0].cost)
+				setCost2(selected[1].cost)
+				// set state variables to the random images
+	
+				// saving the score to localstorage
+				localStorage.setItem('score', score)
+	
+				// saving isGameActive to localstorage
+				localStorage.setItem('isGameActive', JSON.stringify (isGameActive))
+			},300)
+		}
 
-			// set state variables to the random images
-			setImage1(selected[0])
-			setImage2(selected[1])
-			setCost1(selected[0].cost)
-			setCost2(selected[1].cost)
-			// set state variables to the random images
-
-			// saving the score to localstorage
-			localStorage.setItem('score', score)
-
-			// saving isGameActive to localstorage
-			localStorage.setItem('isGameActive', JSON.stringify (isGameActive))
-		},500)
+		else {
+			setTimeout(()=> {
+				const shuffled = weapons_data.sort(() => 0.5 - Math.random());
+				let selected = shuffled.slice(0, 2);
+	
+				// set state variables to the random images
+				setImage1(selected[0])
+				setImage2(selected[1])
+				setCost1(selected[0].cost)
+				setCost2(selected[1].cost)
+				// set state variables to the random images
+	
+				// saving the score to localstorage
+				localStorage.setItem('score', score)
+	
+				// saving isGameActive to localstorage
+				localStorage.setItem('isGameActive', JSON.stringify (isGameActive))
+			},1000)
+		}
 		
-	},[score]) // runs only when score updates
+		
+	},[score,isGameActive]) // runs only when score updates
 
 
 
@@ -100,25 +123,44 @@ const GamePage = ()=> {
 			// correct answer
 			if (price1 > price2) {
 
-				// correct answer alert
-				setAlert({type:'success'})
+				setShowCost(true)
 
-				// show the score again after 1.1s
 				setTimeout(()=> {
-					setAlert({type:'none'})
-				},1100)
-				setShowCost(false)
 
-				// increase score by 1
-				increaseScore()
+					// correct answer alert
+					setAlert({type:'success'})
+
+					// increase score by 1
+					increaseScore()
+				},400)
+				
+
+				setTimeout(()=> {
+					setShowCost(false)
+				},1400)
+				
+
+				// show the score again after 1.5s
+				setTimeout(()=> {
+					setAlert({type:'none'})	
+				},1400)
 			}
 
 
 			// incorrect answer
 			else {
 
+				setShowCost(true)
 				// incorrect answer alert
-				setAlert({type:'failure'})
+				setTimeout(()=> {
+
+					// incorrect answer alert
+					setAlert({type:'failure'})
+				},400)
+
+				setTimeout(()=> {
+					setShowCost(false)
+				},1000)
 
 				// show the score again after 1.1s
 				setTimeout(()=> {
@@ -136,19 +178,47 @@ const GamePage = ()=> {
 
 			// correct answer
 			if (price2 > price1) {
-				setAlert({type:'success'})
+				setShowCost(true)
+
 				setTimeout(()=> {
-					setAlert({type:'none'})
-				},1100)
-				setShowCost(false)
-				increaseScore()
+
+					// correct answer alert
+					setAlert({type:'success'})
+
+					// increase score by 1
+					increaseScore()
+				},400)
+				
+
+				setTimeout(()=> {
+					setShowCost(false)
+				},1400)
+
+				// show the score again after 1.5s
+				setTimeout(()=> {
+					setAlert({type:'none'})	
+				},1400)
 			}
 
 			// incorrect answer
 			else {
-				setAlert({type:'failure'})
+				setShowCost(true)
+				// incorrect answer alert
+				setTimeout(()=> {
+
+					// incorrect answer alert
+					setAlert({type:'failure'})
+				},400)
+
+				setTimeout(()=> {
+					setShowCost(false)
+				},1000)
+
+				// show the score again after 1.1s
 				setTimeout(()=> {
 					setAlert({type:'none'})
+
+					// show game over modal
 					openGameOverModal(true)
 				},1000)
 			}
