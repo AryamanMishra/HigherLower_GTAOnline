@@ -370,6 +370,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin-top: 5.5em;
+
 }
 
 .closeGame-gamepage button {
@@ -383,6 +384,7 @@ body {
 	letter-spacing: 1.5px;
 	box-shadow: 0px 8px rgb(6, 107, 6);
 	border: none;
+	margin-bottom: 2em;
 }
 
 
@@ -515,35 +517,38 @@ body {
 @media only screen and (max-width:1000px){
 	.game-page {
 		margin-top: 7em;
-		gap: 4em;
+		gap: 4.2em;
 	}
 	.first-image {
-		width: 52vw;
-		height: 45vh;
+		width: 50vw;
+		height: 40vh;
 	}
 	.second-image {
-		width: 52vw;
-		height: 45vh;
+		width: 50vw;
+		height: 40vh;
 	}
 	.first-image img {
-		width: 340px;
+		width: 330px;
 	}
 	.first-image h3 {
-		font-size: 1.72em;
+		font-size: 1.45em;
 		width: 350px;
 	}
 	.second-image img {
-		width: 340px;
+		width: 330px;
 	}
 	.second-image h3 {
-		font-size: 1.72em;
-		width: 360px;
+		font-size: 1.45em;
+		width: 350px;
 	}
 	.alert-none {
-		font-size: 2em;
+		font-size: 1.9em;
 	}
 	.game-title {
 		width: 650px;
+	}
+	.game-title h2 {
+		font-size: 1.6em;
 	}
 	.game-page {
 		gap: 4em;
@@ -551,17 +556,17 @@ body {
 	}
 	.closeGame-gamepage {
 		width: 100%;
-		font-size: 1.2em;
+		font-size: 1.05em;
 	}
 }
 
 @media only screen and (max-width:900px){
 	.game-title h2 {
-		font-size: 1.65em;
+		font-size: 1.75em;
 	}
 	.game-page {
 		flex-direction: column;
-		gap: 3em;
+		gap: 2.8em;
 	}
 	.game-title {
 		width: 70vw;
@@ -571,7 +576,7 @@ body {
 		margin-bottom: 3em;
 	}
 	.alert-none {
-		font-size: 1.8em;
+		font-size: 1.9em;
 	}
 	.alert-failure {
 		font-size: 1.8em;
@@ -580,32 +585,34 @@ body {
 		font-size: 1.8em;
 	}
 	.modal-container {
-		width: 46vw;
-		height: 53vh;
+		width: 57vw;
+		height: 46vh;
 	}
 	.modal-container h3 {
 		font-size: 1.8em;
 	}
 	.modal-container p {
-		font-size: 2em;
+		font-size: 2.2em;
 	}
 	.modal-btn-container button {
-		font-size: 1em;
-		width: 200px;
+		font-size: 1.2em;
+		width: 250px;
 	}
 	.first-image {
 		width: 27em;
-		height: 27em;
+		height: 29em;
 	}
 	.second-image {
 		width: 27em;
-		height: 27em;
+		height: 29em;
 	}
 	.first-image img {
-		width: 260px;
+		width: 320px;
+		height: 200px;
 	}
 	.second-image img {
-		width: 260px;
+		width: 320px;
+		height: 200px;
 	}
 	.first-image h3 {
 		font-size: 1.4em;
@@ -672,6 +679,9 @@ body {
 	.game-page {
 		gap: 2.3em;
 	}
+	.game-title {
+		width: 290px;
+	}
 	.game-title h2 {
 		font-size: 1.1em;
 	}
@@ -684,22 +694,22 @@ body {
 		height: 17em;
 	}
 	.first-image img {
-		width: 210px;
+		width: 220px;
 	}
 	.first-image h3 {
 		font-size: 1.1em;
 		width: 200px;
 	}
 	.second-image img {
-		width: 210px;
+		width: 220px;
 	}
 	.second-image h3 {
 		font-size: 1.1em;
 		width: 200px;
 	}
 	.closeGame-gamepage button {
-		width: 255px;
-		font-size: 0.92em;
+		width: 210px;
+		font-size: 0.96em;
 	}
 	.alert-none {
 		font-size: 1.5em;
